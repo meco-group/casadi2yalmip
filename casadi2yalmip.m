@@ -50,7 +50,7 @@ function out = casadi2yalmip(nlp,data,discrete)
   algorithm = regexprep(algorithm,'input\[1\]\[(\d+)\]','p$1');
   algorithm = regexprep(algorithm,'output\[0\]\[(\d+)\]','f');
   algorithm = regexprep(algorithm,'output\[1\]\[(\d+)\]','g$1');
-  algorithm = regexprep(algorithm,'sq\((.*?)\)','(\1)^2');
+  algorithm = regexprep(algorithm,'sq\((.*?)\)','($1)^2');
 
   fprintf(main,algorithm);
   
